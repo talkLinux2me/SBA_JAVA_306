@@ -33,6 +33,14 @@ import java.util.List;
  * CourseI interface, overrides all abstract service methods and
  * provides implementation for each method.
  */
-public class CourseService {
+public class CourseService implements CourseI {
+    SessionFactory factory = new Configuration().configure().buildSessionFactory();
+    Session session = null;
+
+    public void createCourse(Course course){
+        Transaction transaction = null;
+
+
+    }
 
 }
