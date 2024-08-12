@@ -24,6 +24,12 @@ import java.util.Set;
  * of the relationship. Implement Lombok annotations to eliminate boilerplate code.
  */
 
+@AllArgsConstructor
+@FieldDefaults( level = AccessLevel.PRIVATE)
+@Setter
+@Getter
+@ToString
+
 public class Course {
 
 }
