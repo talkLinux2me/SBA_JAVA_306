@@ -49,6 +49,21 @@ public class Student {
     @JoinTable(name = "students_courses", joinColumns = @JoinColumn(name = "student_email"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
     private Set<Course> courses = new HashSet<>();
 
+    // no args constructor
+
+    Student(){
+
+    }
+    Student(String email, String name, String password, Set<Course> Courses) {
+        this.email = email;
+        this.name = name;
+        this.password = password;
+        this.courses = courses;
+    }
+
+    // required args constructor
+
+
     }
 
 
