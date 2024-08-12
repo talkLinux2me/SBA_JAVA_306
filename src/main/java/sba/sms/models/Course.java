@@ -39,4 +39,16 @@ public class Course {
     @Column(name = "id")
     private int id;
 
+    @Column (name= "name", length = 50, nullable = false)
+    private String name;
+
+    @Column (name= "instructor", length = 50, nullable = false)
+    private String instructor;
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.REMOVE, CascadeType.PERSIST})
+    @JoinTable(name = "students_courses", joinColumns = @JoinColumn(name = "courses_id"), inverseJoinColumns = @JoinColumn(name = "student_email"))
+    private Set<Student> students = new HashSet<>();
+
+    //no args constructor
+
 }
