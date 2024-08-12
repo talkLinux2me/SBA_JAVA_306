@@ -69,10 +69,42 @@ public class Student {
         this.password = password;
     }
 
-
-
-
+    //  INSERTING GETTERS AND SETTERS
+    public String getEmail() {
+        return this.email;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Set<Course> getCourses() {
+        return this.courses;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
+    }
+
+
+
+}
 
 
 
