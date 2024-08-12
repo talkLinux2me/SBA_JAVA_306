@@ -50,6 +50,9 @@ import sba.sms.utils.HibernateUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentService {
+public class StudentService implements StudentI {
+    SessionFactory factory = new Configuration().configure().buildSessionFactory();
+    Session session = null;
+
 
 }
