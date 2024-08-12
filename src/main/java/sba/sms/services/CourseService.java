@@ -40,7 +40,23 @@ public class CourseService implements CourseI {
     public void createCourse(Course course){
         Transaction transaction = null;
 
+        try {
+            // We're starting to begin a transaction but would like to make changes to our database
+            session = factory.openSession();
+            transaction = session.beginTransaction();
 
+            // Save course to our database
+            session.persist(course);
+
+            // commit course/ push course to our database
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            System.out.println(e);
+        }
+    }
     }
 
-}
+
