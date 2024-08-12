@@ -51,4 +51,24 @@ public class Course {
 
     //no args constructor
 
+    Course() {
+
+    }
+
+    //all args constructor
+
+    Course(String name, String instructor, Set<Student> students) {
+        this.name = name;
+        this.instructor = instructor;
+        this.students = students;
+
+    }
+
+    // required args constructor
+    public Course(String name, String instructor) {
+        this.name = name;
+        this.instructor = instructor;
+
+    }
+
 }
