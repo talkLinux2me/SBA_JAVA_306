@@ -57,6 +57,15 @@ public class CourseService implements CourseI {
             System.out.println(e);
         }
     }
-    }
+//COURSES
+    // Course -> courseId = 2, courseName = English
+
+    // getCourseById()
+
+    // getCourseById(1) -> Course -> courseId = 1, courseName = Math
+
+    // getCourseById(2) -> Course -> courseId = 2, courseName = English
+
+}
 
 
