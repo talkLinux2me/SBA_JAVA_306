@@ -33,6 +33,21 @@ import java.util.Set;
 
 public class Student {
 
+    @Id
+    @Column(length = 50, name = "email")
+    private String email;
+
+    @Column(length = 50, name = "name")
+    private String name;
+
+    @Column(length = 50, name = "password")
+    private String password;
+
+    @ManyToMany(targetEntity = Course.class, fetch = FetchType.EAGER, cascade = { CascadeType.DETACH, CascadeType.MERGE,
+            CascadeType.REMOVE,
+            CascadeType.PERSIST })
+    @JoinTable(name = "students_courses", joinColumns = @JoinColumn(name = "student_email"), inverseJoinColumns = @JoinColumn(name = "courses_id"))
+    private Set<Course> courses = new HashSet<>();
 
     }
 
