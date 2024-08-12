@@ -29,6 +29,8 @@ import java.util.Set;
 @Setter
 @Getter
 @ToString
+@Entity
+@Table(name = "course")
 
 public class Course {
 
