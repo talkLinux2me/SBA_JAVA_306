@@ -22,7 +22,7 @@ public class HibernateUtil {
     }
 
     /**
-     * @Getter builds a standard getter method for the object
+      @Getter builds a standard getter method for the object
      * sessionFactory.
      */
     @Getter
@@ -59,9 +59,9 @@ public class HibernateUtil {
      */
     public static void shutdown() {
         getSessionFactory().close();
-
-
     }
 
-
+    public static SessionFactory getSessionFactory() {
+        return sessionFactory;
+    }
 }

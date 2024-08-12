@@ -112,7 +112,7 @@ public class StudentService implements StudentI {
             transaction = session.beginTransaction();
 
             // QUERY THAT WE SENT TO THE DATABASE
-            String hqlString = "FROM  Student WHERE email = :email AND password = :password";
+            String hqlString = "FROM Student WHERE email = :email AND password = :password";
             Query<Student> query = session.createQuery(hqlString, Student.class);
 
             // Changing the variables with our own values
